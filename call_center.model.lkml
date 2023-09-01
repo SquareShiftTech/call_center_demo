@@ -6,10 +6,10 @@ label: "Retail Banking"
 include: "/views/*.view.lkml"                # include all views in the views/ folder in this project
 include: "/banking_and_card_views/*.view.lkml"
 
-datagroup: call_center_etl {
-  sql_trigger: SELECT max(DATE(conversation_start_at)) FROM call_center.transcript_with_messages ;;
-  max_cache_age: "24 hours"
-}
+# datagroup: call_center_etl {
+#   sql_trigger: SELECT max(DATE(conversation_start_at)) FROM call_center.transcript_with_messages ;;
+#   max_cache_age: "24 hours"
+# }
 
 explore: transcript {
   label: "(6) Call Center"
